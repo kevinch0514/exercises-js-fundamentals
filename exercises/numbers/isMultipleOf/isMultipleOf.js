@@ -18,7 +18,13 @@ function isMultipleOf(n, d) {
   // Consider handling two cases separately:
   //   1. When d === 0
   //   2. When d !== 0
-}
+  if (n % d === 0) {
+    return true
+  }
+  else {
+    return false
+  }
+  }
 
 if (require.main === module) {
   /*

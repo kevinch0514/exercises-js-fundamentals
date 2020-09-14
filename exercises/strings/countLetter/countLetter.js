@@ -26,7 +26,9 @@ function countLetter(string, letter) {
 }
 
 if (require.main === module) {
+  let string =
   console.log('Running sanity checks for countLetter:');
+  console.log(countLetter);
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
