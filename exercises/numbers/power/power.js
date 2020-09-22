@@ -21,6 +21,7 @@ function power(base, exponent) {
 
     That means you don't have to deal with, e.g., power(2, 1.5).
   */
+//  Question: If I don't use **, do I use looping? I'm not sure how to achieve this with only arithmetic.
  return base**exponent;
 }
 

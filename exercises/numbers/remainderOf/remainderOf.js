@@ -22,6 +22,7 @@ function remainderOf(n, d) {
     If you're not sure, step out of the code and use pen + paper. Start
     with simple examples and pay attention to the process you carry out.
   */
+//  I figured Math.floor is not the right way to do this problem. If I were to calculate the remainder, I would need a for loop probably. I would do (n-d) until (n-d)<0.
   q = Math.floor (n/d);
   p = q * d
   return n-p;

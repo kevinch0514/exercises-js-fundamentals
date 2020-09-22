@@ -23,12 +23,21 @@
 
 function countLetter(string, letter) {
   // This is your job. :)
-}
+  // SOURCE: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split
+  let array = string.split('');
+  let lettercount = 0
+  for (let letter of array) {
+    //insert an if clause to compare letter to letter.
+      lettercount = lettercount + 1;
+    }
+    return lettercount;
+  }
+
 
 if (require.main === module) {
-  let string =
+  let string = 'Mississippi'
   console.log('Running sanity checks for countLetter:');
-  console.log(countLetter);
+  console.log(countLetter(string, 's'));
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
