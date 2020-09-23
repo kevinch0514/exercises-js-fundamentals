@@ -13,11 +13,12 @@
 function capitalize(string) {
   // This is your job. :)
   // NOTES: improve/need help on how to get last character of string without counting.
-  return str1 = string.charAt(0).toUpperCase() + string.slice (1,24);
+  return str1 = string.charAt(0).toUpperCase() + string.slice (1); //collab w/ Trey, Tsega-Ab, and Kyle
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for capitalize:');
+  console.log(capitalize('running sanity checks for capitalize:'));
   console.log(capitalize('hello, my name is Kevin.'))
 
   // Add your own sanity checks here.

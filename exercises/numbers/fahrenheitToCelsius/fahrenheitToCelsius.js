@@ -6,12 +6,15 @@
  */
 function fahrenheitToCelsius(temp) {
   // This is your job. :).
+  // Collab w/ Kyle and Tsega-Ab
+  return ((5/9)*(temp-32))
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for fahrenheitToCelsius:');
 
   // Your sanity checks go here.
+  console.log(fahrenheitToCelsius(32));
 }
 
 module.exports = fahrenheitToCelsius;

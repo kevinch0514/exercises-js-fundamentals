@@ -19,7 +19,11 @@ function isMultipleOf(n, d) {
   //   1. When d === 0
   //   2. When d !== 0
 
-    return n % d === 0
+  // ANOTHER METHOD: COLLAB W/ KYLE
+  // g = n/d
+  // return n = g*d
+
+    return n % d == 0;
   }
 
 if (require.main === module) {

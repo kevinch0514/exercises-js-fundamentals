@@ -35,7 +35,7 @@ function printSolidRightTriangle(height) {
   for (let i = 0; i < height; i++) {
     // The _____ is meant to be "fill in the blank"
 
-    let numChars = _____;
+    let numChars = height;
 
     helpers.printCountTimes('#', numChars);
     helpers.printNewLine();
