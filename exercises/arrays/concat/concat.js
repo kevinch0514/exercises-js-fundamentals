@@ -23,6 +23,15 @@
  */
 function concat(leftArray, rightArray) {
   // This is your job. :)
+  let concatArray = []
+
+  for (let element of leftArray) {
+    concatArray.push(element);
+  }
+  for (let element of rightArray) {
+   concatArray.push(element);
+  }
+  return concatArray;
 }
 
 if (require.main === module) {
@@ -30,6 +39,12 @@ if (require.main === module) {
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
+
+  console.log(concat([1, 2, 3], [4, 5, 6]));
+  console.log(concat([-10, undefined], [true, 'waffles']));
+  console.log(concat([], []));
+  console.log(concat([20, 104], []));
+  console.log(concat([], ['hello', 'world']));
 }
 
 module.exports = concat;

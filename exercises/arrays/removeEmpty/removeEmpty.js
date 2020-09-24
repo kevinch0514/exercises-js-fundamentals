@@ -13,6 +13,15 @@
  */
 function removeEmpty(array) {
   // This is your job. :)
+
+  let newArray = [];
+
+  for (let element of array) {
+    if (element !== null && element !== '' && element !== undefined) {
+      newArray.push(element);
+    }
+  }
+  return newArray;
 }
 
 if (require.main === module) {
@@ -20,6 +29,10 @@ if (require.main === module) {
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
+
+  console.log(removeEmpty([null, '', '']));
+  console.log(removeEmpty(['Jesse', undefined, 'Farmer']));
+  console.log(removeEmpty(['one', '', 'two', '', 'three']));
 }
 
 module.exports = removeEmpty;
