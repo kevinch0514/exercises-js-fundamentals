@@ -15,7 +15,8 @@ function countWords(string) {
 
 if (require.main === module) {
   console.log('Running sanity checks for countWords:');
-  console.log(countWords('Hello, my name is Kevin.'))
+  console.log(countWords('Hello, my name is Kevin.'));
+  console.log(countWords('Running sanity checks for countWords and answer should be 10'));
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
 }

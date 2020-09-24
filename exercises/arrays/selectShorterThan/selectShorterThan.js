@@ -20,6 +20,14 @@
  */
 function selectShorterThan(array, threshold) {
   // This is your job. :)
+  let shorterThanArray = [];
+
+  for (let element of array) {
+    if (element.length < threshold) {
+      shorterThanArray.push(element);
+    }
+  }
+  return shorterThanArray;
 }
 
 if (require.main === module) {
@@ -27,6 +35,10 @@ if (require.main === module) {
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
+
+  console.log(selectShorterThan(['', 'aaa', 'bb', 'c', 'dddd'], 0));
+  console.log(selectShorterThan(['', 'aaa', 'bb', 'c', 'dddd'], 1));
+  console.log(selectShorterThan(['', 'aaa', 'bb', 'c', 'dddd'], 4));
 }
 
 module.exports = selectShorterThan;

@@ -15,6 +15,14 @@
  */
 function selectEvens(array) {
   // This is your job. :)
+let evensArray = [];
+
+  for (let element of array) {
+    if ((element%2) === 0) {
+      evensArray.push(element);
+    }
+  }
+  return evensArray;
 }
 
 if (require.main === module) {
@@ -22,6 +30,9 @@ if (require.main === module) {
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
+  console.log(selectEvens([1, 2, 3, 4, 5]));
+  console.log(selectEvens([10, 2, 19, 10]));
+  console.log(selectEvens([11, 21, 31]));
 }
 
 module.exports = selectEvens;

@@ -22,7 +22,16 @@ function power(base, exponent) {
     That means you don't have to deal with, e.g., power(2, 1.5).
   */
 //  Question: If I don't use **, do I use looping? I'm not sure how to achieve this with only arithmetic.
- return base**exponent;
+//  return base**exponent;
+  let currentCount = 0
+  let number = 1
+
+  while (currentCount < exponent) {
+    number = number * base;
+    currentCount = currentCount +1;
+  }
+
+  return number
 }
 
 if (require.main === module) {
@@ -34,6 +43,9 @@ if (require.main === module) {
   console.log(power(-1, 1) === -1);
   console.log(power(-1, 2) === 1);
   console.log(power(-1, 3) === -1);
+
+  console.log(power(2, 3));
+  console.log(power(3, 3));
 
   // Your sanity checks go here
   // What should happen if base is 0? If exponent is 0?

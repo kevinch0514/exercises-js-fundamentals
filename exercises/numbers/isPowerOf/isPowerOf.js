@@ -26,6 +26,25 @@ function isPowerOf(num, base) {
   // Remember, you can assume that num is a positive integer.
 
 //NOTES: In order to calculate powerOf, I would do num/base until base=base
+let k = 0
+let number = 1
+
+let currentCount = 0
+let number = 1
+
+while (currentCount < exponent) {
+  number = number * base;
+  currentCount = currentCount +1;
+}
+
+return number
+
+while (number < num) {
+  number = number * base;
+  k = k + 1;
+}
+
+return (number = num)
 }
 
 if (require.main === module) {

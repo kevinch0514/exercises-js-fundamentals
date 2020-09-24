@@ -17,6 +17,14 @@
  */
 function countLessThan(array, threshold) {
   // This is your job. :)
+  let lessThanCounter = 0;
+
+  for (let element of array) {
+    if (element < threshold) {
+      lessThanCounter = lessThanCounter + 1;
+    }
+  }
+  return lessThanCounter;
 }
 
 if (require.main === module) {
@@ -24,6 +32,10 @@ if (require.main === module) {
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
+
+  console.log(countLessThan([1, 2, 3, 4, 5], 2));
+  console.log(countLessThan([1, 2, 3, 4, 5], 17));
+  console.log(countLessThan([1, 2, 1, 2, 3, 4, 1, 2, 1], 1));
 }
 
 module.exports = countLessThan;

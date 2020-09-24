@@ -17,6 +17,13 @@
  */
 function firstIndexOf(haystack, needle) {
   // This is your job. :)
+  let index = -1
+  for (let element of haystack) {
+    if (element === needle) {
+      index = haystack.indexOf(element);
+    }
+  }
+  return index;
 }
 
 if (require.main === module) {
@@ -24,6 +31,11 @@ if (require.main === module) {
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
+  console.log(firstIndexOf([1, 2, 30, -10], 480));
+  console.log(firstIndexOf([1, 2, 30, -10], 30));
+  console.log(firstIndexOf([1, 30, 30, -10], 30));
+  console.log(firstIndexOf(['giraffe', 'giraffe', 'banana'], 'banana'));
+  console.log(firstIndexOf(['giraffe', 'giraffe', 'banana'], 'giraffe'));
 }
 
 module.exports = firstIndexOf;

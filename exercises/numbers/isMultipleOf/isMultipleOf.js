@@ -22,8 +22,13 @@ function isMultipleOf(n, d) {
   // ANOTHER METHOD: COLLAB W/ KYLE
   // g = n/d
   // return n = g*d
-
-    return n % d == 0;
+  if (d===0 && n===0) {
+    return true;
+  } else if (n%d==0) {
+    return true;
+  } else {
+    return false;
+  }
   }
 
 if (require.main === module) {

@@ -20,6 +20,14 @@
  */
 function selectLongerThan(array, threshold) {
   // This is your job. :)
+  let longerThanArray = [];
+
+  for (let element of array) {
+    if (element.length > threshold) {
+      longerThanArray.push(element);
+    }
+  }
+  return longerThanArray;
 }
 
 if (require.main === module) {
@@ -27,6 +35,10 @@ if (require.main === module) {
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
+
+  console.log(selectLongerThan(['', 'aaa', 'bb', 'c', 'dddd'], -1));
+  console.log(selectLongerThan(['', 'aaa', 'bb', 'c', 'dddd'], 0));
+  console.log(selectLongerThan(['', 'aaa', 'bb', 'c', 'dddd'], 4));
 }
 
 module.exports = selectLongerThan;
