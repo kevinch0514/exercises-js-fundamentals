@@ -14,17 +14,23 @@
 function replaceCharacters(string, replacementDict) {
   // This is your job. :)
   // Any helpful resource on dictionaries? I've seen the GitHub, but idk how to access specific elements of the dictionary without typing dict.keyName (keyname as in the first item before :)
-  let dict = replacementDict;
-  let array = string.split('');
-  console.log(dict);
-  console.log(dict[1]);
-  console.log(dict.l);
-  for (let element of array) {
-    return element.split(dict.keyName).join(dict['keyName']);
-    // if (element = replacementDict)  {
+  let finalString = '';
+  // console.log(replacementDict['h']);
+  // let h = 'h';
+  // console.log(replacementDict[h]);
 
-    // }
+  for (let currentChar of string) {
+    // let dictKey = currentChar;
+    // console.log('dict Key', dictKey);
+    // console.log('replacement', replacementDict[dictKey]);
+    if (replacementDict[currentChar] !== undefined) {
+      finalString = finalString + replacementDict[currentChar];
+    } else {
+      finalString = finalString + currentChar;
+    }
   }
+
+  return finalString;
 }
 
 if (require.main === module) {

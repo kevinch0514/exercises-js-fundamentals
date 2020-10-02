@@ -28,14 +28,23 @@ function remainderOf(n, d) {
   // return n-p;
   // COLLAB W/ TSEGA-AB
 
-    if (n === 0)
-      return 0;
-      else if ((n-d)<0) {
-        return n;
-      }
-      else {
-      return (remainderOf((n-d), d));
+  // RECURSION
+  //   if (n === 0)
+  //     return 0;
+  //     else if ((n-d)<0) {
+  //       return n;
+  //     }
+  //     else {
+  //     return (remainderOf((n-d), d));
+  // }
+
+  let leftOver = n;
+
+  while (leftOver >= d) {
+    leftOver = leftOver - d;
   }
+
+  return leftOver;
   }
 
 if (require.main === module) {

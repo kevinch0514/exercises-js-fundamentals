@@ -15,14 +15,14 @@
  */
 function anyPositive(array) {
   // This is your job. :)
-  let positives = 0;
+  // Feedback Incorporated: simplified to return true or false. I actually didn't know that return immediately ends a function.
   for (let element of array) {
     if (element > 0) {
-      positives = positives + 1;
+      return true;
     }
   }
 
-  return positives > 0;
+  return false;
 }
 
 if (require.main === module) {

@@ -27,7 +27,20 @@ function replaceCharacter(string, target, replaceWith) {
   // }
   // return array.join('');
 
-  return string.split(target).join(replaceWith)
+  // ATTEMPT 2
+  // return string.split(target).join(replaceWith)
+
+  let finalString = '';
+
+  for (let currentChar of string) {
+    if (currentChar === target) {
+      finalString = finalString + replaceWith;
+    } else {
+      finalString = finalString + currentChar;
+    }
+  }
+
+  return finalString;
 }
 
 if (require.main === module) {

@@ -13,11 +13,12 @@
  */
 function countEvens(array) {
   // This is your job. :)
+  // Feedback Incorporated: Used the +=
   let evenCounter = 0;
 
   for (let element of array) {
     if ((element%2) === 0) {
-      evenCounter = evenCounter + 1;
+      evenCounter += 1;
     }
   }
   return evenCounter;
