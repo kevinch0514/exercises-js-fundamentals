@@ -17,6 +17,8 @@
 
 function rotN(string) {
   // This is your job. :)
+
+  return finalString;
 }
 
 if (require.main === module) {
@@ -24,6 +26,9 @@ if (require.main === module) {
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
+
+  console.log(rotN('Hello, world!', 13));
+  console.log(rotN('Hello, world!', 9));
 }
 
 module.exports = rotN;

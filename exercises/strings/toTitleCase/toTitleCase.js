@@ -17,7 +17,22 @@
  */
 
 function toTitleCase(string) {
-  // This is your job. :)
+  /* ATTEMPT 1
+
+  NOTES: I'm a still a little confused why a for...of loop would not work but a for loop does. Taking note from your comment on arrays, firstIndexOf.
+
+    string = string.toLowerCase().split(' ');
+    for (let currentWord of string) {
+      currentWord.charAt(0).toUpperCase() + currentWord.slice(1);
+    }
+    return string.join(' ');
+  */
+
+    string = string.toLowerCase().split(' ');
+    for (var i = 0; i < string.length; i++) {
+      string[i] = string[i].charAt(0).toUpperCase() + string[i].slice(1);
+    }
+    return string.join(' ');
 }
 
 if (require.main === module) {
@@ -25,6 +40,9 @@ if (require.main === module) {
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
+
+  console.log(toTitleCase('wElCoMe to THE wILD wiLD WEST!'));
+  console.log(toTitleCase('HelLo, My nAmE IS KeVIn!'));
 }
 
 module.exports = toTitleCase;

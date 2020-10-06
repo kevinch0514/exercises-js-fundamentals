@@ -24,8 +24,35 @@
  * @returns {string} Returns 'win', 'lose', or 'draw' depending on
  *  whether the first player won, lost, or drew the match.
  */
-function rockPaperScissorsWinner(array) {
+function rockPaperScissorsWinner(firstPlayerMove, secondPlayerMove) {
   // This is your job. :)
+  // I think there's another TYPE in line 27 where it said array. I replaced it with firstPlayerMove, secondPlayerMove
+
+  // if (firstPlayerMove === secondPlayerMove) {
+  //   return 'draw';
+  // }
+
+  // if ((firstPlayerMove === 0 && secondPlayerMove === 1) ||
+  // (firstPlayerMove === 1 && secondPlayerMove === 2) ||
+  // (firstPlayerMove === 2 && secondPlayerMove === 0)) {
+  //   return 'win';
+  // }
+
+  // if ((firstPlayerMove === 1 && secondPlayerMove === 0) ||
+  // (firstPlayerMove === 2 && secondPlayerMove === 1) ||
+  // (firstPlayerMove === 0 && secondPlayerMove === 2)) {
+  //   return 'lose';
+  // }
+
+
+  if (firstPlayerMove - secondPlayerMove === 0) {
+    return 'draw';
+  } else if ((firstPlayerMove - secondPlayerMove === -1) ||
+    (firstPlayerMove - secondPlayerMove === 2)) {
+      return 'win';
+    } else {
+      return 'lose';
+      }
 }
 
 if (require.main === module) {
@@ -33,6 +60,13 @@ if (require.main === module) {
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
+
+  console.log(rockPaperScissorsWinner(0, 0)); // draw
+  console.log(rockPaperScissorsWinner(0, 1)); // win
+  console.log(rockPaperScissorsWinner(0, 2)); // lose
+  console.log(rockPaperScissorsWinner(1, 1)); // draw
+  console.log(rockPaperScissorsWinner(1, 2)); // win
+  console.log(rockPaperScissorsWinner(2, 2)); // draw
 }
 
 module.exports = rockPaperScissorsWinner;

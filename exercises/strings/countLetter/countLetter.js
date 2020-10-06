@@ -23,14 +23,26 @@
 
 function countLetter(string, letter) {
   // This is your job. :)
-  let array = [];
-  const iterable = string;
-  for (const value of iterable) {
-    if (value===letter) {
-      array.push(letter);
-    };
-  };
-    return array.length;
+  // let array = [];
+  // const iterable = string;
+  // for (const value of iterable) {
+  //   if (value===letter) {
+  //     array.push(letter);
+  //   };
+  // };
+  //   return array.length;
+
+
+  // incorporated looping from Jesse's feedback for this exercise
+  let finalCount = 0;
+
+  for (let currentLetter of string) {
+    if (currentLetter === letter) {
+      finalCount += 1;
+    }
+  }
+
+  return finalCount;
   }
 
 

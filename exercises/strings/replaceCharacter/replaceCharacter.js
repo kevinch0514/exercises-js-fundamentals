@@ -34,9 +34,9 @@ function replaceCharacter(string, target, replaceWith) {
 
   for (let currentChar of string) {
     if (currentChar === target) {
-      finalString = finalString + replaceWith;
+      finalString += replaceWith;
     } else {
-      finalString = finalString + currentChar;
+      finalString += currentChar;
     }
   }
 

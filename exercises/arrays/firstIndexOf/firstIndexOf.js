@@ -17,13 +17,23 @@
  */
 function firstIndexOf(haystack, needle) {
   // This is your job. :)
-  let index = -1
-  for (let element of haystack) {
-    if (element === needle) {
-      index = haystack.indexOf(element);
+
+  // ATTEMPT 1
+  // let index = -1
+  // for (let element of haystack) {
+  //   if (element === needle) {
+  //     index = haystack.indexOf(element);
+  //   }
+  // }
+  // return index;
+
+  for (var i = 0; i < haystack.length; i++) {
+    if (haystack[i] === needle) {
+      return i;
     }
   }
-  return index;
+
+  return -1;
 }
 
 if (require.main === module) {

@@ -16,7 +16,20 @@
  */
 
 function toUpperCase(string) {
-  // This is your job. :)
+  let upperCaseDict = { 'a': 'A', 'b': 'B',  'c': 'C', 'd': 'D', 'e': 'E', 'f': 'F', 'g': 'G', 'h': 'H', 'i': 'I',
+  'j': 'J', 'k': 'K', 'l': 'L', 'm': 'M', 'n': 'N', 'o': 'O', 'p': 'P', 'q': 'Q', 'r': 'R', 's': 'S', 't': 'T',
+  'u': 'U', 'v': 'V', 'w': 'W', 'x': 'X', 'y': 'Y', 'z': 'Z' }
+  let finalString = '';
+
+  for (let currentChar of string) {
+    if (upperCaseDict.hasOwnProperty(currentChar)) {
+      finalString += upperCaseDict[currentChar];
+    } else {
+      finalString += currentChar;
+    }
+  }
+
+  return finalString;
 }
 
 if (require.main === module) {
@@ -24,6 +37,9 @@ if (require.main === module) {
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
+
+  console.log(toUpperCase('HelLo fRiends!'));
+  console.log(toUpperCase('hello, my name is kevin!'));
 }
 
 module.exports = toUpperCase;

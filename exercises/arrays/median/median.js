@@ -13,13 +13,24 @@
  *
  * @example
  * median([900, 10, 20]); // => 20 since 20 is the middle element
- * mean([-10, 20, 400, 10]); // => 15 since 10,20 are the middle elements
+ * mean([-10, 20, 400, 10]); // => 15 since 10,20 are the middle elements     <<<THERE'S A TYPO, I THINK. MEDIAN INSTEAD OF MEAN, RIGHT?>>>
  *
  * @param {number[]} array - An array of numbers
  * @returns {number} The median of the numbers in the array
  */
 function median(array) {
-  // This is your job. :)
+
+  let median = 0;
+
+  array.sort();
+
+  if (array.length % 2 === 1) {
+    median = array[(array.length - 1) / 2];
+  } else {
+    median = (array[array.length / 2 - 1] + array[array.length / 2]) / 2;
+  }
+
+  return median;
 }
 
 if (require.main === module) {
@@ -27,6 +38,11 @@ if (require.main === module) {
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
+
+  console.log(median([900, 10, 20]));
+  console.log(median([-10, 20, 400, 10]));
+  console.log(median([1, 2, 3]));
+  console.log(median([1, 2, 3, 4]));
 }
 
 module.exports = median;

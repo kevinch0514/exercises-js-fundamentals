@@ -19,6 +19,16 @@ function isValidTriangle(a, b, c) {
     from 0º and you drawing the third side. What's the largest this third side
     could ever be?
   */
+  // Pythagorean Theorem : a^2 + b^2 = c^2
+  /* 1. a + b > c
+     2. b + c > a
+     3. c + a > b
+  */
+ if (a + b > c && b + c > a && c + a > b ) {
+   return true;
+ } else {
+   return false;
+ }
 }
 
 if (require.main === module) {

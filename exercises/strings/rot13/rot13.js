@@ -29,7 +29,23 @@
  */
 
 function rot13(string) {
-  // This is your job. :)
+  // figuring this out is taking a lot of energy and research time. Time to sleep. ZZZZ
+  let encrypted = [];
+
+  for (var i = 0; i < string.length; i++) {
+    let asciiNum = string.charCodeAt(i);
+    if (string.charCodeAt(i) >= 65 && string.charCodeAt(i) <=77) {
+      encrypted.push(String.fromCharCodeAt(string.charCodeAt(i) + 13));
+    }
+    else if (string.charCodeAt(i) >= 78 && string.charCodeAt(i) <= 99) {
+      encrypted.push(String.fromCharCodeAt(string.charCodeAt(i) - 13));
+    }
+    else {
+      encrypted.push(string[i]);
+    }
+  }
+
+  return encrypted;
 }
 
 if (require.main === module) {
@@ -37,6 +53,9 @@ if (require.main === module) {
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
+
+  console.log(rot13('Hello, world!'));
+  console.log(rot13('Uryyb, jbeyq!'));
 }
 
 module.exports = rot13;

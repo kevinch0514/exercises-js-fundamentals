@@ -14,7 +14,24 @@
  */
 
 function toSnakeCase(string) {
-  // This is your job. :)
+  /**
+   * INSIGHT: while a dictionary is much more flexible, it's a lot more timeconsuming and takes up more lines of code.
+   * Going to incorporate charCodeAt() for rot13.js and rotN.js
+   */
+  let snakeCaseDict = { 'A': 'a', 'B': 'b',  'C': 'c', 'D': 'd', 'E': 'e', 'F': 'f', 'G': 'g', 'H': 'h', 'I': 'i',
+  'J': 'j', 'K': 'k', 'L': 'l', 'M': 'm', 'N': 'n', 'O': 'o', 'P': 'p', 'Q': 'q', 'R': 'r', 'S': 's', 'T': 't',
+  'U': 'u', 'V': 'v', 'W': 'w', 'X': 'x', 'Y': 'y', 'Z': 'z', ' ': '_' }
+  let finalString = '';
+
+  for (let currentChar of string) {
+    if (snakeCaseDict.hasOwnProperty(currentChar)) {
+      finalString += snakeCaseDict[currentChar];
+    } else {
+      finalString += currentChar;
+    }
+  }
+
+  return finalString;
 }
 
 if (require.main === module) {
@@ -22,6 +39,9 @@ if (require.main === module) {
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
+
+  console.log(toSnakeCase('HelLo fRiends!'));
+  console.log(toSnakeCase('HELLO, MY NAME IS KEVIN!'));
 }
 
 module.exports = toSnakeCase;
