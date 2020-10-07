@@ -6,7 +6,10 @@
  * @param {number[]} array - The input array
  * @returns {number} The largest element in the array
  */
+
+
 function largest(array) {
+
   let largestSoFar = array[0];
 
   for (let element of array) {

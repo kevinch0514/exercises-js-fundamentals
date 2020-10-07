@@ -23,6 +23,29 @@ function primeFactors(num) {
     and use pen/paper, index cards, etc. — anything that helps you think
     about it without getting stuck in JavaScript syntax.
   */
+
+  // Honestly, I'm just stuck cause I don't really understand what prime factors mean.
+  let results = [];
+
+  for (let i = 1; i <= num; i++) {
+    if ((num % i) === 0) {
+      results.push(i);
+    }
+  }
+
+  let primeResults = [];
+
+  for (let factors of results) {
+    if (factors !== 1) {
+      for (let i = 1; i <= factors; i++) {
+        if ((i !== 1) && (i !== factors) && ((factors % i) === 0)) {
+          primeResults.push(i);
+        }
+      }
+    }
+  }
+
+  return primeResults;
 }
 
 if (require.main === module) {
@@ -30,6 +53,12 @@ if (require.main === module) {
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
+
+  console.log(primeFactors(2));
+  console.log(primeFactors(2 * 2));
+  console.log(primeFactors(2 * 2 * 3));
+  console.log(primeFactors(2 * 2 * 3 * 17 * 197));
+  console.log(primeFactors(917329));
 }
 
 module.exports = primeFactors;

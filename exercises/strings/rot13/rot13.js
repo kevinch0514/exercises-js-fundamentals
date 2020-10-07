@@ -29,23 +29,24 @@
  */
 
 function rot13(string) {
-  // figuring this out is taking a lot of energy and research time. Time to sleep. ZZZZ
-  let encrypted = [];
 
-  for (var i = 0; i < string.length; i++) {
-    let asciiNum = string.charCodeAt(i);
-    if (string.charCodeAt(i) >= 65 && string.charCodeAt(i) <=77) {
-      encrypted.push(String.fromCharCodeAt(string.charCodeAt(i) + 13));
-    }
-    else if (string.charCodeAt(i) >= 78 && string.charCodeAt(i) <= 99) {
-      encrypted.push(String.fromCharCodeAt(string.charCodeAt(i) - 13));
-    }
-    else {
-      encrypted.push(string[i]);
+  let rot13Dict = {
+    'A': 'N', 'B': 'O',  'C': 'P', 'D': 'Q', 'E': 'R', 'F': 'S', 'G': 'T', 'H': 'U', 'I': 'V', 'J': 'W', 'K': 'X', 'L': 'Y', 'M': 'Z',
+    'N': 'A', 'O': 'B', 'P': 'C', 'Q': 'D', 'R': 'E', 'S': 'F', 'T': 'G', 'U': 'H', 'V': 'I', 'W': 'J', 'X': 'K', 'Y': 'L', 'Z': 'M',
+    'a': 'n', 'b': 'o',  'c': 'p', 'd': 'q', 'e': 'r', 'f': 's', 'g': 't', 'h': 'u', 'i': 'v', 'j': 'w', 'k': 'x', 'l': 'y', 'm': 'z',
+    'n': 'a', 'o': 'b', 'p': 'c', 'q': 'd', 'r': 'e', 's': 'f', 't': 'g', 'u': 'h', 'v': 'i', 'w': 'j', 'x': 'k', 'y': 'l', 'z': 'm'
+  }
+  let finalString = '';
+
+  for (let currentChar of string) {
+    if (rot13Dict.hasOwnProperty(currentChar)) {
+      finalString += rot13Dict[currentChar];
+    } else {
+      finalString += currentChar;
     }
   }
 
-  return encrypted;
+  return finalString;
 }
 
 if (require.main === module) {
@@ -54,8 +55,8 @@ if (require.main === module) {
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
 
-  console.log(rot13('Hello, world!'));
-  console.log(rot13('Uryyb, jbeyq!'));
+  console.log(rot13('Hello, world!')); // Uryyb, jbeyq!
+  console.log(rot13('Uryyb, jbeyq!')); // Hello, world!
 }
 
 module.exports = rot13;

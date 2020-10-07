@@ -24,8 +24,6 @@
 function isPowerOf(num, base) {
   // Your code here
   // Remember, you can assume that num is a positive integer.
-
-//NOTES: In order to calculate powerOf, I would do num/base until base=base
 let leftOver = num;
 
 while (leftOver % base === 0) {

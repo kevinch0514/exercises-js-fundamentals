@@ -38,8 +38,8 @@ if (require.main === module) {
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
 
-  console.log(toUpperCase('HelLo fRiends!'));
-  console.log(toUpperCase('hello, my name is kevin!'));
+  console.log(toUpperCase('HelLo fRiends!')); // HELLO FRIENDS!
+  console.log(toUpperCase('hello, my name is kevin!')); // HELLO, MY NAME IS KEVIN!
 }
 
 module.exports = toUpperCase;

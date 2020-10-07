@@ -40,8 +40,8 @@ if (require.main === module) {
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
 
-  console.log(toSnakeCase('HelLo fRiends!'));
-  console.log(toSnakeCase('HELLO, MY NAME IS KEVIN!'));
+  console.log(toSnakeCase('HelLo fRiends!')); // hello_friends!
+  console.log(toSnakeCase('HELLO, MY NAME IS KEVIN!')); // hello,_my_name_is_kevin!
 }
 
 module.exports = toSnakeCase;

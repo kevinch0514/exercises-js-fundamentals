@@ -21,17 +21,28 @@
 
 function isPerfectSquare(num) {
   // A negative number can't be a perfect square, so immediately return false.
-  if (num < 0) {
-    return false;
+  // The rest is your job. :)
+
+  for(let i = 0; i <= num ; i++) {
+    let sq = i * i;
+    if (sq === num) {
+      return true;
+    }
   }
 
-  // The rest is your job. :)
+  return false;
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for isPerfectSquare:');
 
   // Your sanity checks go here
+
+  console.log(isPerfectSquare(-1)); // false
+  console.log(isPerfectSquare(0)); // true
+  console.log(isPerfectSquare(1)); // true
+  console.log(isPerfectSquare(2)); // false
+  console.log(isPerfectSquare(9)); // true
 }
 
 module.exports = isPerfectSquare;

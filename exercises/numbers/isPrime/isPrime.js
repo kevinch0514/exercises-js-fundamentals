@@ -20,6 +20,22 @@ function isPrime(num) {
     and use pen/paper, index cards, etc. — anything that helps you think
     about it without getting stuck in JavaScript syntax.
   */
+
+  let primeCounter = 0
+
+  if (num === 1) {
+    return false;
+  } else {
+    for (let i = 1; i <= num; i++) {
+      // Your code goes here. :)
+      // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push
+      if ((i !== 1) && (i !== num) && ((num % i) === 0)) {
+        primeCounter += 1
+      }
+    }
+
+  }
+  return primeCounter === 0;
 }
 
 if (require.main === module) {
@@ -28,6 +44,7 @@ if (require.main === module) {
   console.log(isPrime(1) === false);
   console.log(isPrime(2) === true);
   console.log(isPrime(4) === false);
+  console.log(isPrime(17) === true);
 
   // Your own sanity checks go here
 }

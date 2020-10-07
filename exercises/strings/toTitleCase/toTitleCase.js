@@ -41,8 +41,8 @@ if (require.main === module) {
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
 
-  console.log(toTitleCase('wElCoMe to THE wILD wiLD WEST!'));
-  console.log(toTitleCase('HelLo, My nAmE IS KeVIn!'));
+  console.log(toTitleCase('wElCoMe to THE wILD wiLD WEST!')); // Welcome To The Wild Wild West!
+  console.log(toTitleCase('HelLo, My nAmE IS KeVIn!')); // Hello, My Name Is Kevin!
 }
 
 module.exports = toTitleCase;

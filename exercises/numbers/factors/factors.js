@@ -16,6 +16,9 @@ function factors(num) {
   for (let i = 1; i <= num; i++) {
     // Your code goes here. :)
     // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push
+    if ((num % i) === 0) {
+      results.push(i);
+    }
   }
   return results;
 }
@@ -25,6 +28,10 @@ if (require.main === module) {
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
+
+  console.log(factors(2)); // [1, 2]
+  console.log(factors(4)); // [1, 2, 4]
+  console.log(factors(12)); // [1, 2, 3, 4, 6, 12]
 }
 
 module.exports = factors;

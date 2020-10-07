@@ -18,7 +18,8 @@ function letterGrade(percentGrade) {
   /**
    * A+ = > 97   | A  = 93-96 | A- = 90-92
    * B+ = 87-89  | B  = 83-86 | B- = 80-82
-   * C+ = 77-79  | C  = 73-76 | C- = 60-72
+   * C+ = 77-79  | C  = 73-76 | C- = 70-72
+   * D+ = 67-69  | D  = 63-66 | D- = 60-72
    * F  = < 60
    */
   if (percentGrade > 97) {
@@ -45,8 +46,17 @@ function letterGrade(percentGrade) {
   if (percentGrade >= 73 && percentGrade <= 76) {
     return 'C';
   }
-  if (percentGrade >= 60 && percentGrade <= 72) {
+  if (percentGrade >= 70 && percentGrade <= 72) {
     return 'C-';
+  }
+  if (percentGrade >= 67 && percentGrade <= 69) {
+    return 'D+';
+  }
+  if (percentGrade >= 63 && percentGrade <= 66) {
+    return 'D';
+  }
+  if (percentGrade >= 60 && percentGrade <= 62) {
+    return 'D-';
   }
   if (percentGrade < 60) {
     return 'F';
@@ -59,10 +69,11 @@ if (require.main === module) {
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
 
-  console.log(letterGrade(98));
-  console.log(letterGrade(89));
-  console.log(letterGrade(70));
-  console.log(letterGrade(50));
+  console.log(letterGrade(98)); // A+
+  console.log(letterGrade(89)); // B+
+  console.log(letterGrade(70)); // C-
+  console.log(letterGrade(64)); // D
+  console.log(letterGrade(50)); // F
 }
 
 module.exports = letterGrade;

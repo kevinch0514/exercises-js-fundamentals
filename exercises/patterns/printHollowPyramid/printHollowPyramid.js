@@ -31,6 +31,11 @@ function printHollowPyramid(height) {
   for (let i = 0; i < height; i++) {
     // This is your job. :)
 
+    let numSpaces = height - i;
+    let numChars = i * 2 - 1;
+
+    helpers.printCountTimes(' ', numSpaces);
+    helpers.printCountTimes('#', numChars);
     helpers.printNewLine();
   }
 }

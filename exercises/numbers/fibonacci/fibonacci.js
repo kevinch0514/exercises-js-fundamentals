@@ -23,6 +23,23 @@
  */
 function fibonacci(n) {
   // This is your job. :)
+
+  if (n === 0) {
+    return 0;
+  } else if (n === 1) {
+      return 1;
+  } else {
+      let sum;
+      let num1 = 0;
+      let num2 = 1;
+
+      for (i = 2; i <= n; i++) {
+        sum = num1 + num2;
+        num1 = num2;
+        num2 = sum;
+      }
+      return num2;
+  }
 }
 
 if (require.main === module) {
@@ -30,6 +47,11 @@ if (require.main === module) {
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
+
+  console.log(fibonacci(0)); // 0
+  console.log(fibonacci(1)); // 1
+  console.log(fibonacci(10)); // 55
+  console.log(fibonacci(12)); // 144
 }
 
 module.exports = fibonacci;
